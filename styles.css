@@ -1,0 +1,111 @@
+/* Custom styles for Nextpact Service website */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Wave animation for the hero section */
+.wave-bottom {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+/* Mobile menu transitions */
+.mobile-menu {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+/* Mobile menu button hover effect */
+.mobile-menu-button {
+  transition: transform 0.2s ease;
+}
+
+.mobile-menu-button:hover {
+  transform: scale(1.1);
+}
+
+/* Hover effects for service cards */
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Custom focus styles for form elements */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Job card hover effects */
+.job-card {
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Application form modal animation */
+#applicationModal {
+  transition: opacity 0.3s ease;
+}
+
+#applicationModal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* File input styling */
+input[type="file"] {
+  padding: 0.5rem;
+  border: 2px dashed #e2e8f0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="file"]:hover {
+  border-color: #3b82f6;
+}
+
+/* Custom scrollbar for the modal */
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #f3f4f6;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 4px;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Modal header sticky positioning */
+.modal-content > div:first-child {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 10;
+}
